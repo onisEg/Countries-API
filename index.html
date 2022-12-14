@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Countries</title>
+
+</head>
+<body>
+    <div class="container-fluid text-white py-5 bg-dark">
+        <h1 class="text-center">rest countries API </h1>
+    </div>
+    <div class="navbar d-flex justify-content-center py-3 bg-light">
+        <div class="d-flex gap-5">
+            <form class="d-flex " role="search">
+                <input id="filterName" class="form-control me-5" type="search" placeholder="Country" aria-label="Search">
+                <input id="filterRegion" class="form-control me-5" type="search" placeholder="Region" aria-label="Search">
+            </form>
+
+        </div>
+    </div>
+    <div class="container pt-5">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Independent</th>
+                    <th scope="col">Capital</th>
+                    <th scope="col">Region</th>
+                </tr>
+            </thead>
+            <tbody id="tbody" class="table-group-divider">
+            </tbody>
+        </table>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
