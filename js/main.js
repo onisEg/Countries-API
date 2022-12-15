@@ -43,7 +43,6 @@ function onNameFilterChange (event){
 }
 
 // filter by region name 
-
 function onRegionFilterChange(event){
     let searchStr = event.target.value.toLowerCase();
     // console.log(searchStr);
@@ -58,11 +57,42 @@ function onRegionFilterChange(event){
 }
 
 
-let addEvents = () => {
-    const nameField = document.getElementById('filterName');
-    nameField.addEventListener("keydown", onNameFilterChange)
 
-    const regionField = document.getElementById('filterRegion');
-    regionField.addEventListener("keydown", onRegionFilterChange )
+
+// filter by capital name 
+
+function onCapitalFilterChange(event) {
+    let searchStr = event.target.value.toLowerCase();
+    console.log(searchStr);
+    if (searchStr) {
+        let countries = countriesList.slice();
+        let filteredCountries = countries.filter(country => country.capital[0].toLowerCase().includes(searchStr));
+        showCountries(filteredCountries)
+
+    } else {
+        showCountries(countriesList);
+    }
+}
+
+
+
+
+
+let addEvents = () => {
+    $("#filterName").on("keyup", onNameFilterChange)
+    $("#filterRegion").on("keyup", onRegionFilterChange)
+    $("#capital").on("keyup", onCapitalFilterChange)
 }
 addEvents()
+
+
+$("#yes").on("click", () => {
+    let countries = countriesList.slice();
+    // let filteredCountries =  countries.filter(country => country.independent.true)
+    console.log(countries);
+
+})
+
+$("#no").on("change", () => {
+    console.log("no");
+})

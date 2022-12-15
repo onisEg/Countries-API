@@ -12,14 +12,29 @@
 
 </head>
 <body>
-    <div class="container-fluid text-white py-5 bg-dark">
+    <div class="container-fluid text-white py-3 bg-dark">
         <h1 class="text-center">rest countries API </h1>
     </div>
-    <div class="navbar d-flex justify-content-center py-3 bg-light">
+    <div class="navbar d-flex justify-content-center py-1 bg-light">
         <div class="d-flex gap-5">
             <form class="d-flex " role="search">
                 <input id="filterName" class="form-control me-5" type="search" placeholder="Country" aria-label="Search">
                 <input id="filterRegion" class="form-control me-5" type="search" placeholder="Region" aria-label="Search">
+                <input id="capital" class="form-control me-5" type="search" placeholder="Capital" aria-label="Search">
+                
+                <label class="px-5" for="">Independent </label>
+                <div class="form-check px-3">
+                    <input id="yes" class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        yes
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input id="no" class="form-check-input" type="checkbox" value="" id="defaultCheck2" >
+                    <label class="form-check-label" for="defaultCheck2">
+                        no
+                    </label>
+                </div>
             </form>
 
         </div>
@@ -39,6 +54,7 @@
         </table>
     </div>
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
