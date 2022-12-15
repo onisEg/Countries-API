@@ -27,10 +27,9 @@ let showCountries = country => {
     tbody.innerHTML = countriesListRow;
 }
 
-
 // filter by countery name 
-const nameField = document.getElementById('filterName');
-nameField.addEventListener("keydown", event => {
+
+function onNameFilterChange (event){
     let searchStr = event.target.value.toLowerCase();
     // console.log(searchStr);
     if (searchStr) {
@@ -41,12 +40,11 @@ nameField.addEventListener("keydown", event => {
     } else {
         showCountries(countriesList);
     }
-})
-
+}
 
 // filter by region name 
-const regionField = document.getElementById('filterRegion');
-regionField.addEventListener("keydown", event => {
+
+function onRegionFilterChange(event){
     let searchStr = event.target.value.toLowerCase();
     // console.log(searchStr);
     if (searchStr) {
@@ -57,5 +55,14 @@ regionField.addEventListener("keydown", event => {
     } else {
         showCountries(countriesList);
     }
-})
+}
 
+
+let addEvents = () => {
+    const nameField = document.getElementById('filterName');
+    nameField.addEventListener("keydown", onNameFilterChange)
+
+    const regionField = document.getElementById('filterRegion');
+    regionField.addEventListener("keydown", onRegionFilterChange )
+}
+addEvents()
