@@ -64,7 +64,7 @@ function onRegionFilterChange(event){
 function onCapitalFilterChange(event) {
     let searchStr = event.target.value.toLowerCase();
     console.log(searchStr);
-    if (searchStr) {
+    if (country.capital) {
         let countries = countriesList.slice();
         let filteredCountries = countries.filter(country => country.capital[0].toLowerCase().includes(searchStr));
         showCountries(filteredCountries)
@@ -79,9 +79,9 @@ function onCapitalFilterChange(event) {
 
 
 let addEvents = () => {
-    $("#filterName").on("keyup", onNameFilterChange)
-    $("#filterRegion").on("keyup", onRegionFilterChange)
-    $("#capital").on("keyup", onCapitalFilterChange)
+    $("#filterName").on("input", onNameFilterChange)
+    $("#filterRegion").on("input", onRegionFilterChange)
+    $("#capital").on("input", onCapitalFilterChange) 
 }
 addEvents()
 
@@ -96,3 +96,4 @@ $("#yes").on("click", () => {
 $("#no").on("change", () => {
     console.log("no");
 })
+
