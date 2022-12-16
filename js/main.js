@@ -59,41 +59,47 @@ function onRegionFilterChange(event){
 
 
 
-// filter by capital name 
+// filter by capital name
 
-function onCapitalFilterChange(event) {
-    let searchStr = event.target.value.toLowerCase();
-    console.log(searchStr);
-    if (country.capital) {
-        let countries = countriesList.slice();
-        let filteredCountries = countries.filter(country => country.capital[0].toLowerCase().includes(searchStr));
-        showCountries(filteredCountries)
-
-    } else {
-        showCountries(countriesList);
-    }
+function onCapitalFilterChange() {
+    let inputCapitalName = this.value.toLowerCase();
+    console.log(inputCapitalName);
+    // let countries = countriesList.slice();
+    let filteredCountries = [];
+    let countries = filteredCountries.length ? filteredCountries : countriesList;
+    filteredCountries = countries.filter((country) => {
+        if (country.capital) {
+            return country.capital[0].toString().toLowerCase().includes(inputCapitalName);
+        }
+    })
+    
+    showCountries(filteredCountries)
+   
 }
 
 
 
 
 
-let addEvents = () => {
-    $("#filterName").on("input", onNameFilterChange)
-    $("#filterRegion").on("input", onRegionFilterChange)
-    $("#capital").on("input", onCapitalFilterChange) 
+$('input[type="radio"]').change(function () { 
+    let value = $('input[type="radio"]:checked').val()
+    let countries = countriesList.slice()
+    let filteredCountries = countries.filter(country => country.independent === JSON.parse(value) );
+    showCountries(filteredCountries)
+});
+
+
+$('#freeInput').on("click", function () {
+    location.reload()
+})
+
+
+
+
+function addEvents() {
+    $("#filterName").on("input", onNameFilterChange);
+    $("#filterRegion").on("input", onRegionFilterChange);
+    $("#capital").on("input", onCapitalFilterChange);
 }
 addEvents()
-
-
-$("#yes").on("click", () => {
-    let countries = countriesList.slice();
-    // let filteredCountries =  countries.filter(country => country.independent.true)
-    console.log(countries);
-
-})
-
-$("#no").on("change", () => {
-    console.log("no");
-})
 

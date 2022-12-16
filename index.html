@@ -16,7 +16,7 @@
         <h1 class="text-center">rest countries API </h1>
     </div>
     <div class="navbar d-flex justify-content-center py-1 bg-light">
-        <div class="row gap-5">
+        <div class="row gap-5 pt-3">
             <form class="d-flex " role="search">
                 <input id="filterName" class="form-control me-5" type="search" placeholder="Country" aria-label="Search">
                 <input id="capital" class="form-control me-5" type="search" placeholder="Capital" aria-label="Search">
@@ -25,16 +25,16 @@
                 <label class="px-2" for="">Independent </label>
                 <div class="d-flex gap-2">
                     <div class="form-check ">
-                        <input id="yes" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <input class="form-check-input" value="true" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                         <label class="form-check-label" for="flexRadioDefault1"> yes </label>
                     </div>
                     <div class="form-check">
-                        <input id="no" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <input class="form-check-input" value="false" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
                         <label class="form-check-label" for="flexRadioDefault2"> no </label>
                     </div>
                 </div>
             </form>
-
+            <button id="freeInput" type="button" class="btn btn-danger w-25 m-auto mb-3">clear filter</button>
         </div>
     </div>
     <div class="container pt-5">
