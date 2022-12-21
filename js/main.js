@@ -31,7 +31,7 @@ let showCountries = country => {
     tbody.innerHTML = countriesListRow;
 }
 
-// // filter by countery name 
+// // filter by countery name
 
 // function onNameFilterChange (event){
 //     let searchStr = event.target.value.toLowerCase();
@@ -46,7 +46,7 @@ let showCountries = country => {
 //     }
 // }
 
-// // filter by region name 
+// // filter by region name
 // function onRegionFilterChange(event){
 //     let searchStr = event.target.value.toLowerCase();
 //     // console.log(searchStr);
@@ -85,7 +85,7 @@ let showCountries = country => {
 
 
 
-// $('input[type="radio"]').change(function () { 
+// $('input[type="radio"]').change(function () {
 //     let value = $('input[type="radio"]:checked').val()
 //     let countries = countriesList.slice()
 //     let filteredCountries = countries.filter(country => country.independent === JSON.parse(value) );
@@ -96,6 +96,7 @@ let showCountries = country => {
 // =========================================
 // update about filter
 // the first thing make opject to catch inputs
+
 
 let filters = {
     name: null,
