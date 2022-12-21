@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@
     <title>Countries</title>
 
 </head>
+
 <body>
     <div class="container-fluid text-white py-3 bg-dark">
         <h1 class="text-center">rest countries API </h1>
@@ -18,18 +20,22 @@
     <div class="navbar d-flex justify-content-center py-1 bg-light">
         <div class="row gap-5 pt-3">
             <form class="d-flex " role="search">
-                <input id="filterName" class="form-control me-5" type="search" placeholder="Country" aria-label="Search">
+                <input id="filterName" class="form-control me-5 " type="search" placeholder="Country"
+                    aria-label="Search">
                 <input id="capital" class="form-control me-5" type="search" placeholder="Capital" aria-label="Search">
-                <input id="filterRegion" class="form-control me-5" type="search" placeholder="Region" aria-label="Search">
-                
+                <input id="filterRegion" class="form-control me-5" type="search" placeholder="Region"
+                    aria-label="Search">
+
                 <label class="px-2" for="">Independent </label>
                 <div class="d-flex gap-2">
                     <div class="form-check ">
-                        <input class="form-check-input" value="true" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <input class="form-check-input" value="true" type="radio" name="flexRadioDefault"
+                            id="flexRadioDefault1">
                         <label class="form-check-label" for="flexRadioDefault1"> yes </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" value="false" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <input class="form-check-input" value="false" type="radio" name="flexRadioDefault"
+                            id="flexRadioDefault2">
                         <label class="form-check-label" for="flexRadioDefault2"> no </label>
                     </div>
                 </div>
@@ -41,7 +47,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">Name</th>
+                    <th scope="col">Country</th>
                     <th scope="col">Independent</th>
                     <th scope="col">Capital</th>
                     <th scope="col">Region</th>
@@ -52,7 +58,9 @@
         </table>
     </div>
     <script src="js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>
